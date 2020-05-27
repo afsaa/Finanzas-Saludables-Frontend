@@ -1,3 +1,19 @@
 @import './variables';
 @import './fonts';
 @import './mixins';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  @include widthAndHeight(5px, 5px);
+  background-color: $primary-color;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $secondary-color;
+}
