@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Montserrat&display=swap');
+
+$headings-font: 'Domine', serif;
+$body-font: 'Montserrat', sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headings-font;
+}
+
+p,
+a,
+div > span,
+label {
+  font-family: $body-font;
+}

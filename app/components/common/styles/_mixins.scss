@@ -1,0 +1,59 @@
+@mixin flex($vertically, $horizontally, $direction) {
+  display: flex;
+  align-items: $vertically;
+  justify-content: $horizontally;
+  flex-direction: $direction;
+}
+
+@mixin widthAndHeight($width, $height) {
+  height: $height;
+  width: $width;
+}
+
+@mixin input(
+  $background-color,
+  $text-color,
+  $text-size,
+  $border-bottom-color,
+  $height
+) {
+  background-color: $background-color;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid $border-bottom-color;
+  outline: transparent;
+  color: $text-color;
+  margin: 10px 0px;
+  padding: 0px 10px;
+  font-size: $text-size;
+  height: $height;
+  letter-spacing: 1px;
+}
+
+@mixin button($background-color, $text-color, $text-size, $height) {
+  background-color: $background-color;
+  border: none;
+  border-radius: 25px;
+  color: $text-color;
+  cursor: pointer;
+  height: $height;
+  font-size: $text-size;
+  font-weight: bold;
+  margin: 20px 0px;
+  transition: 500ms background-color;
+}
+
+@mixin footer($bg-color) {
+  background-color: $bg-color;
+  @include flex(center, space-around, initial);
+  @include widthAndHeight(100%, 100px);
+}
+
+@mixin footerLink($text-color) {
+  color: $text-color;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 20px;
+  text-decoration: none;
+}
