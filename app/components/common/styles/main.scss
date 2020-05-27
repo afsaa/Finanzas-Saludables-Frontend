@@ -17,3 +17,19 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: $secondary-color;
 }
+
+.page-not-found__title {
+  color: $primary-color;
+  font-size: 100px;
+  margin: 0;
+}
+.page-not-found__description {
+  color: $primary-color;
+  font-size: 20px;
+  font-weight: bold;
+}
+.page-not-found {
+  @include flex(center, center, column);
+  height: calc(100vh - 200px);
+  background: linear-gradient($primary-color, $secondary-color);
+}
