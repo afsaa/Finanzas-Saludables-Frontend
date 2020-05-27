@@ -1,17 +1,52 @@
-.Header {
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
-
-  a {
-    margin: 1rem auto;
-  }
-
+@import '../common/styles/mixins';
+@import '../common/styles/fonts';
+@import '../common/styles/variables';
+.header {
+  background-color: $primary-color;
+  @include widthAndHeight(100%, 100px);
+  @include flex(initial, space-between, initial);
+}
+.header__img {
+  @include widthAndHeight(250px, 80px);
+  margin: 10px 0px 0px 30px;
+}
+.header__menu {
+  @include flex(center, initial, initial);
+  @include widthAndHeight(auto, 100px);
+  margin-right: 30px;
+  position: relative;
   ul {
-    margin: 0 auto;
-
-    a {
-      margin: 1rem;
-    }
+    @include widthAndHeight(120px, auto);
+    display: none;
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    position: absolute;
+    top: 40px;
+    right: 0;
+  }
+  &:hover ul {
+    @include flex(initial, initial, column);
+  }
+  a {
+    color: $main-text-color;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 2px 0px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  &--profile {
+    @include flex(center, none, none);
+  }
+  &--profile img {
+    width: 50px;
+    margin-right: 5px;
+  }
+  &--profile p {
+    color: $main-text-color;
+    font-family: $body-font;
   }
 }

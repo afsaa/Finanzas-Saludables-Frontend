@@ -7,23 +7,24 @@ import './Header.scss';
 
 // Images
 
-import Banner from '../common/assets/images/Main.png';
+import Logo from '../common/assets/images/logo.png';
+import ProfileImg from '../common/assets/images/profile-icon.png';
 
 function Header() {
   return (
-    <div className="Header">
-      <a href="https://github.com/EvilSpark/react-redux-boilerplate/">
-        <img src={Banner} alt="react-boilerplate - Logo" />
-      </a>
-
-      <ul>
-        <a href="/">Home</a>
-        <a href="/features">Features</a>
-        <a href="https://github.com/EvilSpark/react-redux-boilerplate">
-          Github
-        </a>
-      </ul>
-    </div>
+    <header className="header">
+      <img className="header__img" src={Logo} alt="Logo" />
+      <div className="header__menu">
+        <div className="header__menu--profile">
+          <img src={ProfileImg} alt="Profile" />
+          <p>Username</p>
+        </div>
+        <ul>
+          <a href="/">Perfil</a>
+          <a href="/login">Cerrar Sesión</a>
+        </ul>
+      </div>
+    </header>
   );
 }
 
