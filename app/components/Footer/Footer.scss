@@ -1,8 +1,19 @@
-.Footer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: #0d3a63;
-  color: #fff;
-  height: 300px;
+@import '../common/styles/mixins';
+@import '../common/styles/fonts';
+@import '../common/styles/variables';
+.footer {
+  @include footer($primary-color);
+  &-custom {
+    @include footer($secondary-color);
+  }
+}
+.footer a {
+  @include footerLink($main-text-color);
+}
+.footer-custom a {
+  @include footerLink($primary-color);
+}
+.footer a:hover,
+.footer-custom a:hover {
+  text-decoration: underline;
 }
