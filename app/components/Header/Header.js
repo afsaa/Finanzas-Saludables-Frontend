@@ -31,6 +31,7 @@ function Header(props) {
           <div className="header__menu">
             <div className="header__menu--profile">
               <img src={ProfileImg} alt="Profile" />
+              <p>Username</p>
             </div>
             <ul>
               <a href="/login">Iniciar Sesión</a>
