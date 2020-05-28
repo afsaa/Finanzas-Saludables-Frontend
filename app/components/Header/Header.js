@@ -10,20 +10,34 @@ import './Header.scss';
 import Logo from '../common/assets/images/logo.png';
 import ProfileImg from '../common/assets/images/profile-icon.png';
 
-function Header() {
+function Header(props) {
   return (
     <header className="header">
       <img className="header__img" src={Logo} alt="Logo" />
-      <div className="header__menu">
-        <div className="header__menu--profile">
-          <img src={ProfileImg} alt="Profile" />
-          <p>Username</p>
-        </div>
-        <ul>
-          <a href="/">Perfil</a>
-          <a href="/login">Cerrar Sesión</a>
-        </ul>
-      </div>
+      {
+        // eslint-disable-next-line react/prop-types
+        props.isLoggedIn ? (
+          <div className="header__menu">
+            <div className="header__menu--profile">
+              <img src={ProfileImg} alt="Profile" />
+              <p>Username</p>
+            </div>
+            <ul>
+              <a href="/">Perfil</a>
+              <a href="/login">Cerrar Sesión</a>
+            </ul>
+          </div>
+        ) : (
+          <div className="header__menu">
+            <div className="header__menu--profile">
+              <img src={ProfileImg} alt="Profile" />
+            </div>
+            <ul>
+              <a href="/login">Iniciar Sesión</a>
+            </ul>
+          </div>
+        )
+      }
     </header>
   );
 }

@@ -22,6 +22,8 @@ import Footer from 'components/Footer';
 
 import GlobalStyle from '../../global-styles';
 
+const isLoggedIn = false;
+
 function App() {
   return (
     <div>
@@ -31,7 +33,7 @@ function App() {
       >
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
-      <Header />
+      <Header isLoggedIn={isLoggedIn} />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/features" component={FeaturePage} />

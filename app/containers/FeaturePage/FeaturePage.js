@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import './FeaturePage.scss';
 
-export default class FeaurePage extends React.Component {
+export default class FeaturePage extends React.Component {
   render() {
     return (
       <div className="feature-page">
