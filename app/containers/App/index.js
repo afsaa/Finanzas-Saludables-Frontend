@@ -14,6 +14,7 @@ import { Helmet } from 'react-helmet-async';
 import { hot } from 'react-hot-loader/root';
 import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
+import Login from 'containers/Login/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 // Header and Footer
@@ -28,15 +29,16 @@ function App() {
   return (
     <div>
       <Helmet
-        titleTemplate="%s - React.js Boilerplate"
-        defaultTitle="React.js Boilerplate"
+        titleTemplate="%s - Finanzas Saludables"
+        defaultTitle="Finanzas Saludables"
       >
-        <meta name="description" content="A React.js Boilerplate application" />
+        <meta name="description" content="A Finanzas Saludables application" />
       </Helmet>
       <Header isLoggedIn={isLoggedIn} />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/features" component={FeaturePage} />
+        <Route path="/login" component={Login} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       <Footer />
