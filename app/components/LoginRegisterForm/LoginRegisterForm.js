@@ -8,6 +8,8 @@ import React, { memo } from 'react';
 // import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 import './LoginRegisterForm.scss';
+import googleIcon from '../common/assets/images/google-icon.png';
+import twitterIcon from '../common/assets/images/twitter-icon.png';
 
 function LoginRegisterForm() {
   return (
@@ -35,11 +37,11 @@ function LoginRegisterForm() {
         </form>
         <section className="login__container--social-media">
           <div>
-            <img src="./assets/icons/google-icon.png" alt="Google" />
+            <img src={googleIcon} alt="Google" />
             <span>Iniciar sesión con Google</span>
           </div>
           <div>
-            <img src="./assets/icons/twitter-icon.png" alt="Twitter" />
+            <img src={twitterIcon} alt="Twitter" />
             <span>Iniciar sesión con Twitter</span>
           </div>
         </section>

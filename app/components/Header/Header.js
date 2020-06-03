@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import { useStore } from 'react-redux';
-import PropTypes from 'react/prop-types';
+import PropTypes from 'prop-types';
 // components
 
 // icons
@@ -33,7 +33,7 @@ function Header({ isLoggedIn }) {
   return (
     <header className="header">
       <img className="header__img" src={Logo} alt="Logo" />
-      {/* <div className="header__menu">
+      <div className="header__menu">
         <div className="header__menu--profile">
           <img src={ProfileImg} alt="Profile" />
           <p>Username</p>
@@ -42,13 +42,13 @@ function Header({ isLoggedIn }) {
           <a href="/">Perfil</a>
           <a href="/login">Cerrar Sesión</a>
         </ul>
-      </div> */}
+      </div>
     </header>
   );
 }
 
 Header.propTypes = {
-  isLoggedIn: PropTypes.string.isRequired,
+  isLoggedIn: PropTypes.bool.isRequired,
 };
 
 export default Header;

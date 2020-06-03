@@ -50,3 +50,16 @@
     font-family: $body-font;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .header__menu--profile img {
+    margin: 0;
+  }
+  .header__menu--profile p {
+    display: none;
+  }
+  .header__menu ul {
+    margin-top: 30px;
+    margin-right: 8px;
+  }
+}
