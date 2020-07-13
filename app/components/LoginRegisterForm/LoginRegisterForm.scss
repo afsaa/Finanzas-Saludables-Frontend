@@ -101,11 +101,4 @@
     width: 100%;
     box-shadow: none;
   }
-  .footer {
-    @include flex(flex-start, initial, column);
-    background-color: $secondary-color;
-  }
-  .footer a {
-    margin: 5px;
-  }
 }

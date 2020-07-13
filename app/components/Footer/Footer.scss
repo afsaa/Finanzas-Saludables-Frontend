@@ -17,3 +17,18 @@
 .footer-custom a:hover {
   text-decoration: underline;
 }
+@media only screen and (max-width: 600px) {
+  .footer {
+    @include flex(flex-start, initial, column);
+  }
+  .footer-custom {
+    @include flex(flex-start, initial, column);
+    background-color: $secondary-color;
+  }
+  .footer a {
+    margin: 5px;
+  }
+  .footer-custom a{
+    margin: 5px;
+  }
+}

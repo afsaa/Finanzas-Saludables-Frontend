@@ -22,6 +22,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 import GlobalStyle from '../../global-styles';
+import RegisterForm from '../../components/RegisterForm/RegisterForm';
 
 const isLoggedIn = false;
 
@@ -39,6 +40,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="/features" component={FeaturePage} />
         <Route path="/login" component={Login} />
+        <Route path="/register" component={RegisterForm} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       <Footer />
