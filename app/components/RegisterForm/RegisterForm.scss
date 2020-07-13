@@ -1,0 +1,72 @@
+/**
+*
+* RegisterForm
+*
+*/
+@import '../common/styles/mixins';
+@import '../common/styles/fonts';
+@import '../common/styles/variables';
+
+%login-register {
+  background: linear-gradient($primary-color, $secondary-color);
+  @include flex(center, center, column);
+  padding: 20px 40px;
+  min-height: calc(100vh - 200px);
+}
+.register {
+  @extend %login-register;
+}
+.register__container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid $main-text-color;
+  border-radius: 40px;
+  color: $main-text-color;
+  padding: 60px 68px 40px;
+  min-height: 500px;
+  @include flex(initial, space-around, column);
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.6);
+}
+.register__container--form {
+  @include flex(initial, initial, column);
+}
+.register__container--form label {
+  @include flex(center, initial, initial);
+  font-size: 14px;
+}
+.register__container--login-link {
+  font-size: 14px;
+  text-align: center;
+}
+.register__container--login-link a {
+  color: $main-text-color;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+.register__container--login-link a:hover {
+  text-decoration: underline;
+}
+.register__container--register a:hover {
+  text-decoration: underline;
+}
+.input {
+  @include input(transparent, $main-text-color, 16px, $main-text-color, 50px);
+}
+::placeholder {
+  color: $main-text-color;
+}
+.button {
+  @include button(rgba(255, 255, 255, 0.2), $main-text-color, 20px, 50px);
+}
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+@media only screen and (max-width: 600px) {
+  .register__container {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+}
